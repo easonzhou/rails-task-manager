@@ -10,7 +10,9 @@
           <i class="fa-regular fa-square"></i>
         <% end %>
         <%= link_to task.title, task_path(task.id) %>
-
+        <%= link_to task_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{task.title}?"} do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
       </li>
     <% end %>
   </ul>
