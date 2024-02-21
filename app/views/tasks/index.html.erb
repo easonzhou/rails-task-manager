@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h1>My tasks</h1>
+
+  <ul id="tasks">
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.completed? %>
+          <i class="fa-regular fa-square-check"></i>
+        <% else %>
+          <i class="fa-regular fa-square"></i>
+        <% end %>
+        <%= link_to task.title %>
+
+      </li>
+    <% end %>
+  </ul>
+
+  <hr>
+
+
+</div>
